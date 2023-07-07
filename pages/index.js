@@ -1,115 +1,40 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Layout, { siteTitle } from '../styles/components/layout';
+import utilStyles from '../styles/utils.module.css';
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Layout home>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
-
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
+      <section className={utilStyles.headingMd}>
+        <p>
+          Hi there!<br />
+          <br />
+          I'm a highly skilled and experienced web developer proficient in both Backend and Frontend development with Ruby on Rails, HTML, CSS, JavaScript, Node.Js, PostGresSQL, API Integration where I use JSON, XML, DevOps: Heroku.<br />
+          Here, I try Next.JS
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
+        <p>
+          With a strong background in web development, I specialize in building robust and scalable applications.<br />
+          My Domain of Expertise & Specialities are (but are not limited to):<br />
+          - MVP development from scratch<br />
+          - Marketplace & E-commerce<br />
+          - SaaS - Stock Management Software etc.<br />
+          <br />
+          I have successfully completed the prestigious Le Wagon Web Development BootCamp, where I gained in-depth knowledge and hands-on experience in various web technologies. My education has equipped me with a solid foundation in software development principles and best practices.<br />
+          <br />
+          I take pride in delivering high-quality work that meets clients' needs and exceeds their expectations. I am detail-oriented, reliable, and passionate about crafting elegant and intuitive user interfaces.<br />
+          <br />
+          If you're looking for a dedicated and skilled web developer to bring your ideas to life, I'm here to help. Let's collaborate and create something exceptional together.<br />
+          <br />
+          Feel free to reach out to me with any questions or project opportunities. I look forward to working with you!
+        </p>
+        <h1 className="title">
+          <Link href="/posts/first-post">Contact me!</Link>
+        </h1>
+      </section>
+    </Layout>
+  );
 }
